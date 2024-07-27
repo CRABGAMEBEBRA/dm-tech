@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 48px;
+    margin:0px;
+    margin: 8px 8px 0 8px;
+}
+.logoImg{
+    margin-top: 4px;
+    margin-left: 24px;
+    cursor: pointer;
+    width: 149.82px;
+    height: 24px;
+}
+.middleSection{
+    font-family: Nunito;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+    display: flex;
+    width: 133px;
+    justify-content: space-between; 
+    position: absolute;
+    margin-left: 45vw;   
+    margin-top: 5px; 
+}
+.activeEl{
+    margin: 0px;
+    color:#0073E6;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 3px;
+    cursor: pointer;
+}
+.notActiveEl{
+    margin:0px;
+    cursor: pointer;
+}
+.notActiveEl:hover{
+    color:#0073E6;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 3px;
+    cursor: pointer;
+}
+.lastSection{
+    display:flex;
+    align-items: center;
+    margin-right: 24px;
+}
+.trash{
+    margin-top:7px;
+    font-family: Nunito;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+.trashCan{
+    margin-top:-7px;
+    margin-right: 4px;
+    cursor: pointer;
+}

@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+.mainObject{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: Nunito;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: left;
+    width: 792px;
+    margin-left: 27vw;
+    margin-top: 24px;
+}
+.loadPicture{
+    margin:24px;
+}
+.pictureStars{
+    display: flex;
+    width:76px;
+    height:16px;
+    justify-content: space-between;
+}
+.pictureTitle{
+    margin-top: 24px;
+}
+.trashCan{
+    width: 346px;
+    height: 52px;
+    padding: 16px;
+    border-radius: 12px;
+    background: #0073E6;
+    color:#FFFFFF;
+    font-family: Nunito;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+    border: 0px;
+}
+.mediumDiv{
+    display: flex;
+    font-family: Nunito;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: left;
+    align-items: center;
+    margin-top: 24px;
+}
+.backArrow{
+    margin-right: 8px;
+}
+.warning{
+    font-family: Nunito;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    margin: 0px;
+}
+.secondWarning{
+    font-family: Nunito;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: left;
+    color: #808080;
+}
+.descriptionDiv{
+    width: 792px;
+    height:268px;
+    margin-left: 27vw;
+}
+.description{
+    font-family: Nunito;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    margin: 24px;
+    margin-bottom: 16px;
+}
+.postDescription{
+    font-family: Nunito;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    margin: 24px;
+    margin-top: 0px;
+}
+.backX{
+    float: right;
+    margin-right: 30px;
+}

@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+.main{
+    margin: 0 8px 8px 8px;
+}
+.pictureSection{
+    display:flex;
+    flex-wrap: wrap;
+    margin:24px 14.6vw 40px 14.6vw;
+}
+.pictureDiv{
+    width: 250px;
+    height: 358px;
+    margin: 0 6px 24px 0;
+    margin-right: 12px;
+}
+.pagesDiv{
+    width: 396px;
+    height:52px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 38vw;
+}
+.pictureTitle{
+    font-family: Nunito;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    overflow:hidden;
+    width: 218px;
+    height: 40px;
+    margin-top: 8px;
+    margin-bottom: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    color:#172029; 
+    overflow-y:hidden;
+}
+.pictureTitle:hover{
+    text-decoration: underline;
+}
+.picturePrice{
+    font-family: Nunito;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 24px;
+    margin-top: 13px;
+    margin-bottom: 0px;
+}
+.loadPicture{
+    cursor: pointer;
+}
+.Loading{
+    font-family: Nunito;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+}
