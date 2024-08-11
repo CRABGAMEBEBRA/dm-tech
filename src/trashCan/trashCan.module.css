@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+.trashCanDiv{
+    width: 560px;
+    border-radius: 24px;
+    position: absolute;
+    margin-left: 69vw;
+    background-color: white;
+    margin-top: 72px;
+}
+.image{
+    width: 52px;
+    height: 52px;
+}
+.itemDiv{
+    width: 512px;
+    height:84px;
+    padding-top: 8px;
+    padding-left: 24px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #F2F2F2
+}
+.pictureTitle{
+    width: 144px;
+    height: 20px;
+    overflow: hidden;
+    font-family: Nunito;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    margin-left: 16px;
+}
+.quantityDiv{
+    width: 156px;
+    height: 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 16px;
+    font-family: Nunito;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: left;
+}
+.minus{
+    width:52px;
+    height: 52px;
+    border-radius: 12px 0 0 12px;
+    background: #E6F1FC;
+    color:#0073E6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+}
+.plus{
+    width:52px;
+    height: 52px;
+    border-radius: 0 12px 12px 0;
+    background: #E6F1FC;
+    color:#0073E6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+}
+.quantityP{
+    width:52px;
+    height: 52px;
+    background: #E6F1FC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Nunito;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+}
+.MainSum{
+    width: 112px;
+    height: 24px;
+    font-family: Nunito;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: right;
+    margin: 0px;
+}
+.MainSumDiv{
+    width: 112px;
+    height:40px;
+    margin-left: 16px;
+}
+.singlePrice{
+    margin: 0px;
+    font-family: Nunito;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: right;
+}
+.Itogo{
+    width: 512px;
+    height: 48px;
+    margin: 0 24px 16px 24px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.costItog{
+    font-family: Nunito;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    margin: 0px;
+}
+.sumItog{
+    width: 248px;
+    height: 32px;
+    font-family: Nunito;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 32px;
+    text-align: right;
+    margin: 0px;
+}
+.zakaz{
+    width: 512px;
+    height: 36px;
+    padding: 16px 0px 0px 0px;
+    border-radius: 12px;
+    background: #0073E6;
+    color:#FFFFFF;
+    font-family: Nunito;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+    margin-left: 24px;
+    margin-bottom: 24px;
+}
+.tooMuch{
+    font-family: Nunito;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 32px;
+    margin-left: 24px;
+    padding-bottom: 20px;
+}

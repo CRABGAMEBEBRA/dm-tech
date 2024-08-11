@@ -1,0 +1,76 @@
+.ordersMainDiv {
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+}
+.ordersDiv {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  border-radius: 16px;
+  padding: 24px;
+  width: 67vw;
+  margin-left: 17vw;
+  margin-top: 24px;
+}
+.order {
+  font-family: Nunito;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: left;
+  color: #808080;
+  margin: 0px;
+}
+.orderId {
+  font-family: Nunito;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+  color: #172029;
+  margin: 5px 0 0 0;
+}
+.ordersPicture {
+  display: flex;
+  flex-direction: row;
+  margin: 0 8px 0 0;
+}
+.flexOrderDiv {
+  margin-right: 50px;
+}
+.orderDivData,
+.orderDivSum {
+  display: flex;
+  flex-direction: row;
+  padding-left: 29vw;
+}
+.oformlenoData,
+.orderNaSum {
+  font-family: Nunito;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: right;
+  color: #808080;
+  margin: 0px;
+}
+.orderData,
+.orderSum {
+  font-family: Nunito;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: left;
+  color: #172029;
+  margin: 0px 0 0 8px;
+}
+.orderBigDiv {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 45vw;
+}
+.loadPicture {
+  margin-left: 8px;
+}
