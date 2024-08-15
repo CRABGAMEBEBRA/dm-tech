@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+.mainObject {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: Nunito;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: left;
+  width: 41.2vw;
+  margin-left: 27vw;
+  margin-top: 24px;
+  background: white;
+  border-radius: 16px;
+}
+.loadPicture {
+  margin: 24px;
+  width: 19.5vw;
+  height: 19.5vw;
+}
+.pictureStars {
+  display: flex;
+  width: 76px;
+  height: 16px;
+  justify-content: space-between;
+}
+.pictureTitle {
+  margin-top: 24px;
+  width: 18vw;
+}
+.trashCan {
+  width: 18vw;
+  height: 52px;
+  padding: 16px;
+  border-radius: 12px;
+  background: #0073e6;
+  color: #ffffff;
+  font-family: Nunito;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+  border: 0px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mediumDiv {
+  display: flex;
+  font-family: Nunito;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: left;
+  align-items: center;
+  margin-top: 24px;
+}
+.backArrow {
+  margin-right: 8px;
+}
+.warning {
+  font-family: Nunito;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  margin: 0px;
+}
+.secondWarning {
+  font-family: Nunito;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  color: #808080;
+}
+.descriptionDiv {
+  padding-bottom: 20px;
+  width: 41.2vw;
+  margin-left: 27vw;
+  background: white;
+  border-radius: 16px;
+}
+.description {
+  font-family: Nunito;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+  margin: 24px;
+  margin-bottom: 16px;
+  padding-top: 24px;
+}
+.postDescription {
+  font-family: Nunito;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  margin: 24px;
+  margin-top: 0px;
+}
+.backX {
+  float: right;
+  margin-right: 30px;
+}
+.quantityDiv {
+  width: 156px;
+  height: 52px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.minus {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px 0 0 12px;
+  background: #e6f1fc;
+  color: #0073e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.plus {
+  width: 52px;
+  height: 52px;
+  border-radius: 0 12px 12px 0;
+  background: #e6f1fc;
+  color: #0073e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.quantityP {
+  width: 52px;
+  height: 52px;
+  background: #e6f1fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Nunito;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+}
+.trashCanText {
+  margin: 0px;
+}
+@media (max-width: 1024px) {
+  .mainObject {
+    flex-wrap: wrap;
+    width: 40vw;
+  }
+  .trashCan {
+    width: 30vw;
+  }
+  .pictureTitle {
+    width: 30vw;
+  }
+  .bigDiv {
+    display: flex;
+    flex-direction: column;
+  }
+  .picturePrice {
+    width: 100px;
+  }
+  .warning {
+    width: 30vw;
+  }
+  .secondWarning {
+    width: 30vw;
+  }
+}
+@media (max-width: 425px) {
+  .mainObject {
+    flex-direction: column;
+    width: 80vw;
+    margin-left: 10vw;
+    position: relative;
+    top: 30px;
+    align-items: center;
+  }
+  .pictureTitle {
+    font-family: Nunito;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: left;
+    width: 50vw;
+  }
+  .trashCan {
+    width: 50vw;
+  }
+  .warning {
+    width: 50vw;
+  }
+  .secondWarning {
+    width: 50vw;
+  }
+  .loadPicture {
+    width: 60vw;
+    height: 60vw;
+  }
+  .descriptionDiv {
+    margin-top: 60px;
+    width: 80vw;
+    margin-left: 10vw;
+  }
+}

@@ -1,0 +1,7 @@
+.pictureStars {
+  display: flex;
+  width: 76px;
+  height: 16px;
+  justify-content: space-between;
+  align-items: center;
+}
