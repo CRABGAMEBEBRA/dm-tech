@@ -20,8 +20,12 @@ export const postsSlice = createSlice({
     addPosts(state, action) {
       state.posts = [...state.posts, ...action.payload];
     },
+    nullPosts(state) {
+      state.posts = [];
+      console.log(3);
+    },
   },
 });
 
 export default postsSlice.reducer;
-export const { addPosts } = postsSlice.actions;
+export const { addPosts, nullPosts } = postsSlice.actions;

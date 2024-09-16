@@ -2,18 +2,25 @@ import css from "./header.module.css";
 import logo from "./Logo.svg";
 import trashCan from "./trashCan.svg";
 import TrashCan from "../pages/trashCan/trashCan";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import React from "react";
 import { Link } from "react-router-dom";
 import { useAppSelector } from "../store";
 import sign from "./Sign.svg";
+import { useLocation } from "react-router-dom";
 
 export default function Header() {
+  const location = useLocation();
   const trashCanList = useAppSelector(
     (state) => state.trashCanListSlice.trashCanList
   );
   const [openTrashCan, setopenTrashCan] = useState(false);
   const [activeSection, setActiveSection] = useState(1);
+  useEffect(() => {
+    if (location.pathname == "/orders") {
+      setActiveSection(0);
+    }
+  }, []);
   return (
     <header className={css.header}>
       <Link

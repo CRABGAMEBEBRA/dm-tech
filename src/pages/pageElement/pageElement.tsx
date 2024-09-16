@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react";
 import css from "./pageElement.module.css";
 import backArrow from "./Shape.svg";
-import backX from "./cancel.png";
-import { Link } from "react-router-dom";
 import React from "react";
-import Stars from "../../utils/Stars/stars";
+import Stars from "../../utils/stars/stars.tsx";
 import { useAppDispatch, useAppSelector } from "../../store";
 import { trashCanListSlice } from "../../store/trashCanListReducer";
 import { sumOfTrashcanSlice } from "../../store/sumOfTrashcanReducer";
+import notImage from "./notImage.jpg";
 const { addCanList, deleteCanList, minusCanList, plusCanList } =
   trashCanListSlice.actions;
 const { minusCan, plusCan } = sumOfTrashcanSlice.actions;
@@ -52,6 +51,9 @@ export default function PageElement(props: { indexOfPost: number }) {
   const trashCanList = useAppSelector(
     (state) => state.trashCanListSlice.trashCanList
   );
+  const sumOfTrashcan = useAppSelector(
+    (state) => state.sumOfTrashcanSlice.sumOfTrashcan
+  );
   const indexOfPost = props.indexOfPost;
   useEffect(() => {
     if (
@@ -81,7 +83,10 @@ export default function PageElement(props: { indexOfPost: number }) {
     price: number;
     id: number;
   } = posts[indexOfPost];
-
+  useEffect(() => {
+    localStorage.setItem("trashCan", JSON.stringify(trashCanList));
+    localStorage.setItem("trashCanSum", JSON.stringify(sumOfTrashcan));
+  }, [trashCanList]);
   return (
     <div className={css.uppestDiv}>
       <div className={css.mainObject}>
@@ -89,6 +94,10 @@ export default function PageElement(props: { indexOfPost: number }) {
           className={css.loadPicture}
           src={post.picture}
           alt={`${post.title}`}
+          onError={({ currentTarget }) => {
+            currentTarget.onerror = null; // prevents looping
+            currentTarget.src = notImage;
+          }}
         />
         <div className={css.bigDiv}>
           <p className={css.pictureTitle}>{post.title}</p>
@@ -115,6 +124,7 @@ export default function PageElement(props: { indexOfPost: number }) {
                     ).quantity == 1
                   ) {
                     dispatch(deleteCanList(post.id));
+                    dispatch(minusCan(post.price));
                     setproductsQuantity(0);
                   } else {
                     handleClickMinus(trashCanList, post, productsQuantity - 1);

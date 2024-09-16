@@ -1,0 +1,85 @@
+.CatDiv {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding-left: 14px;
+  width: 150px;
+  font-family: Nunito;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+}
+.check {
+  margin: 0px;
+  float: right;
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+}
+.check:after {
+  background-color: #f1f1f1;
+}
+.catBigDiv {
+  z-index: 9999;
+  position: absolute;
+  overflow: auto;
+  height: 200px;
+  background-color: #f1f1f1;
+  border-radius: 16px;
+  scrollbar-gutter: stable;
+}
+.filterP {
+  align-items: center;
+  background: #ffffff;
+  border-radius: 16px;
+  margin: 20px 10px 0 2px;
+  padding: 16px;
+}
+.catBigDiv::-webkit-scrollbar-thumb {
+  background-color: rgb(139, 139, 139);
+  border: 4px solid transparent;
+  border-radius: 8px;
+  background-clip: padding-box;
+}
+
+.catBigDiv::-webkit-scrollbar {
+  width: 16px;
+}
+.mainDiv {
+  display: flex;
+  justify-content: left;
+  margin-left: 14vw;
+  align-items: center;
+}
+.categorieDiv {
+  margin-left: 20px;
+  margin-right: 30px;
+  margin-top: 36px;
+}
+.costDiv {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 16px;
+  margin: 20px 10px 0 10px;
+  padding-left: 10px;
+}
+input {
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 20px;
+  width: 100px;
+  border-radius: 16px;
+  padding-left: 10px;
+}
+.search {
+  width: 66vw;
+  height: 40px;
+  margin-left: 14.7vw;
+}
+.catP {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+}

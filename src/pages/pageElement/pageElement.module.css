@@ -136,6 +136,10 @@
   align-items: center;
   cursor: pointer;
 }
+.plus:hover,
+.minus:hover {
+  font-size: 34px;
+}
 .quantityP {
   width: 52px;
   height: 52px;
@@ -151,6 +155,12 @@
 }
 .trashCanText {
   margin: 0px;
+}
+.trashCanText:hover {
+  font-size: 17px;
+}
+.trashCan:hover {
+  font-size: 17px;
 }
 @media (max-width: 1024px) {
   .mainObject {

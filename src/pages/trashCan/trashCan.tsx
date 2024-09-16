@@ -1,11 +1,13 @@
 import css from "./trashCan.module.css";
-import React from "react";
+import React, { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../store";
 import { orderSlice } from "../../store/ordersReducer";
 import { trashCanListSlice } from "../../store/trashCanListReducer";
 import { sumOfTrashcanSlice } from "../../store/sumOfTrashcanReducer";
 const { deleteCanList, minusCanList, plusCanList } = trashCanListSlice.actions;
 const { minusCan, plusCan } = sumOfTrashcanSlice.actions;
+import notImage from "./notImage.jpg";
+import { Link } from "react-router-dom";
 
 export default function TrashCan() {
   const dispatch = useAppDispatch();
@@ -30,11 +32,13 @@ export default function TrashCan() {
           Number(trashCanListElement.id) == Number(post.id)
       ).quantity == 1
     ) {
-      dispatch(deleteCanList(post));
+      dispatch(minusCan(post.price));
+      dispatch(deleteCanList(post.id));
+      dispatch(minusCanList([post, productsQuantity]));
     } else {
+      dispatch(minusCan(post.price));
       dispatch(minusCanList([post, productsQuantity]));
     }
-    dispatch(minusCan(post.price));
     //setproductsQuantity((productsQuantity) => productsQuantity - 1);
   };
   const { addOrders } = orderSlice.actions;
@@ -46,13 +50,28 @@ export default function TrashCan() {
   const sumOfTrashcan = useAppSelector(
     (state) => state.sumOfTrashcanSlice.sumOfTrashcan
   );
-
+  useEffect(() => {
+    localStorage.setItem("trashCan", JSON.stringify(trashCanList));
+    localStorage.setItem("trashCanSum", JSON.stringify(sumOfTrashcan));
+  }, [trashCanList]);
   return (
     <div className={css.trashCanDiv}>
       {trashCanList.map((post) => (
         <div className={css.itemDiv} key={post.id}>
-          <img className={css.image} src={post.image} alt="elementImage" />
-          <p className={css.pictureTitle}>{post.title}</p>
+          <Link to={`/product/${post.id}`}>
+            <img
+              onError={({ currentTarget }) => {
+                currentTarget.onerror = null; // prevents looping
+                currentTarget.src = notImage;
+              }}
+              className={css.image}
+              src={post.image}
+              alt="elementImage"
+            />
+          </Link>
+          <Link to={`/product/${post.id}`} className={css.pictureTitle}>
+            {post.title}
+          </Link>
           <div className={css.quantityDiv}>
             <div
               className={css.minus}
@@ -89,9 +108,11 @@ export default function TrashCan() {
         <div
           className={css.zakaz}
           onClick={() => {
-            dispatch(addOrders([trashCanList, sumOfTrashcan]));
-            dispatch(nulLCanList());
-            dispatch(nulLCan());
+            if (trashCanList.length != 0) {
+              dispatch(addOrders([trashCanList, sumOfTrashcan]));
+              dispatch(nulLCanList());
+              dispatch(nulLCan());
+            }
           }}
         >
           Оформить заказ

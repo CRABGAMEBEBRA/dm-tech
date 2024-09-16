@@ -17,6 +17,9 @@ export const orderSlice = createSlice({
   name: "ordersSlice",
   initialState,
   reducers: {
+    localGetOrders(state) {
+      state.orders = JSON.parse(localStorage.getItem("orders") || "[]");
+    },
     addOrders(
       state,
       action: PayloadAction<
@@ -47,4 +50,4 @@ export const orderSlice = createSlice({
 });
 
 export default orderSlice.reducer;
-export const { addOrders } = orderSlice.actions;
+export const { addOrders, localGetOrders } = orderSlice.actions;

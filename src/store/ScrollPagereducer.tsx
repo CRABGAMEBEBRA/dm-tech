@@ -17,8 +17,11 @@ const ScrollpageSlice = createSlice({
     minusPage(state) {
       state.page--;
     },
+    nullPage(state) {
+      state.page = 1;
+    },
   },
 });
 
 export default ScrollpageSlice.reducer;
-export const { plusPage, minusPage } = ScrollpageSlice.actions;
+export const { plusPage, minusPage, nullPage } = ScrollpageSlice.actions;

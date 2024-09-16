@@ -1,11 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { random } from "mathjs";
 import css from "./orders.module.css";
-import { useAppSelector } from "../../store";
+import { useAppDispatch, useAppSelector } from "../../store";
+import notImage from "./notImage.jpg";
+import { localGetList } from "../../store/trashCanListReducer";
+import { localGetSum } from "../../store/sumOfTrashcanReducer";
+import { localGetOrders } from "../../store/ordersReducer";
 
 export default function Orders() {
+  const dispatch = useAppDispatch();
   const orders = useAppSelector((state) => state.orderSlice.orders);
-
+  useEffect(() => {
+    dispatch(localGetList());
+    dispatch(localGetSum());
+    dispatch(localGetOrders());
+  }, []);
+  useEffect(() => {
+    if (orders.length != 0) {
+      localStorage.setItem("orders", JSON.stringify(orders));
+    }
+  }, [orders]);
   return (
     <main>
       <div className={css.ordersMainDiv}>
@@ -24,6 +38,10 @@ export default function Orders() {
                   width="48"
                   height="48"
                   alt="ordersImage"
+                  onError={({ currentTarget }) => {
+                    currentTarget.onerror = null; // prevents looping
+                    currentTarget.src = notImage;
+                  }}
                 />
               ))}
             </div>

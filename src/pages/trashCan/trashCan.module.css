@@ -13,6 +13,13 @@
   width: 52px;
   height: 52px;
 }
+.image:hover {
+  -webkit-transform: scale(1.05); /* Safari and Chrome */
+  -moz-transform: scale(1.05); /* Firefox */
+  -ms-transform: scale(1.05); /* IE 9 */
+  -o-transform: scale(1.05); /* Opera */
+  transform: scale(1.05);
+}
 .itemDiv {
   width: 26.6vw;
   height: 84px;
@@ -33,6 +40,12 @@
   line-height: 20px;
   text-align: left;
   margin-left: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #172029;
+}
+.pictureTitle:hover {
+  text-decoration: underline;
 }
 .quantityDiv {
   width: 156px;
@@ -68,6 +81,10 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+.plus:hover,
+.minus:hover {
+  font-size: 34px;
 }
 .quantityP {
   width: 52px;
@@ -143,6 +160,9 @@
   margin-left: 24px;
   margin-bottom: 24px;
   cursor: pointer;
+}
+.zakaz:hover {
+  font-size: 17px;
 }
 .tooMuch {
   font-family: Nunito;

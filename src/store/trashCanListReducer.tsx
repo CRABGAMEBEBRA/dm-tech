@@ -18,6 +18,9 @@ export const trashCanListSlice = createSlice({
   name: "CanListSlice",
   initialState,
   reducers: {
+    localGetList(state) {
+      state.trashCanList = JSON.parse(localStorage.getItem("trashCan") || "[]");
+    },
     plusCanList(state, action) {
       const vr: WritableDraft<{
         id: number;
@@ -95,4 +98,5 @@ export const {
   addCanList,
   nulLCanList,
   deleteCanList,
+  localGetList,
 } = trashCanListSlice.actions;
